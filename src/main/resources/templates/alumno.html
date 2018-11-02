@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>La ruleta rusa!</h1>
+	
+	<div th:if="${aprobado == false}" style="color:red">
+		El alumno desaprobado es: <b><span th:text="${alumno}"></span></b>
+	</div>
+
+	<div th:if="${aprobado == true}" style="color:green">
+		El alumno aprobado es: <b><span th:text="${alumno}"></span></b>
+	</div>
+	
+	
+</body>
+</html>

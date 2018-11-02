@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Creación de Alumno</h1>
+	
+	<h3>
+		<span th:if="${mensaje != null}" th:text="${mensaje}" style="color:green"></span>
+	</h3>
+	
+	<form th:action="@{/alumnos/guardar}" method="POST" th:object="${alumno}">
+		<br>DNI
+		<input type="text" style="width: 100%" th:field="*{documento}" th:value="*{documento}"/>
+		
+		<br>Nombre
+		<input type="text" style="width: 100%" th:field="*{nombre}" th:value="*{nombre}"/>
+		
+		<br>Apellido
+		<input type="text" style="width: 100%" th:field="*{apellido}" th:value="*{apellido}"/>
+		
+		<input type="submit" value="Guardar"/>
+		
+	</form>
+	
+	<a th:href="@{/alumnos/listado}">Volver al Listado</a>
+		
+</body>
+</html>

@@ -1,0 +1,19 @@
+spring:
+  datasource: 
+    url: jdbc:mysql://localhost:3306/facilitadores?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update    
+  thymeleaf:
+    cache: false 
+  banner:
+    location: classpath:banner.txt
+server:
+  error:
+    whitelabel:
+      enabled: false
+    
